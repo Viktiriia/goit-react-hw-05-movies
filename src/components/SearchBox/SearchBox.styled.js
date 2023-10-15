@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const Div = styled.form`
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -26,3 +26,5 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `;
+
+

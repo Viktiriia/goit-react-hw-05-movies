@@ -27,7 +27,6 @@ const MovieDetails = () => {
       (async () => {
         setIsLoading(true);
         const data = await getFullInformationMovies(movieId);
-        console.log(data);
         setMovieInfo(data);
         setIsLoading(false);
       })();
@@ -75,7 +74,6 @@ const MovieDetails = () => {
             <Suspense fallback={'Loading'}>
             <Outlet />
           </Suspense>
-       
     
     </main>
   );

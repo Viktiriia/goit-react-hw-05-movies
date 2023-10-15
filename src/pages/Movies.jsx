@@ -29,9 +29,10 @@ const Movies = () => {
     setSearchParams(nextParams);
   };
 
+
   return (
     <main>
-      <SearchBox value={movieName} onChange={updateQueryString} />
+      <SearchBox value={movieName} formSubmit={updateQueryString} />
       <MovieList movies={movies} />
     </main>
   );
