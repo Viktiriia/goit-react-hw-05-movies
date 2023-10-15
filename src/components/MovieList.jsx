@@ -5,7 +5,7 @@ const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200';
 const defaultImg =
   'https://image.similarpng.com/very-thumbnail/2020/08/Movie-film-disk-with-clapper-board-vector-PNG.png';
 
-export const MovieList = ({ movies }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
 
   return (
@@ -26,3 +26,5 @@ export const MovieList = ({ movies }) => {
     </MoviesList>
   );
 };
+
+export default MovieList;

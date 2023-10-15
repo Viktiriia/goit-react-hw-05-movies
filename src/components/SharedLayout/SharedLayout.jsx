@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Header, NavList, Link } from './SharedLayout.styled'
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <>
       <Header>
@@ -21,3 +21,5 @@ export const SharedLayout = () => {
     </>
   );
 };
+
+export default SharedLayout;

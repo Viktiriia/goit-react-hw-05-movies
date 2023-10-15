@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCast } from 'services/api';
-import { CastItem } from 'components/CastItem/CastItem';
+import  CastItem  from 'components/CastItem/CastItem';
 import { CastContainer } from './Cast.styled';
-
 
 const Cast = () => {
   const [credits, setCredits] = useState([]);
@@ -14,26 +13,24 @@ const Cast = () => {
   useEffect(() => {
     (async () => {
       try {
-        const {cast} = await getCast(movieId);
+        const { cast } = await getCast(movieId);
         setCredits(cast);
         setLoading(false);
-          
-        } catch (error) {
-          setLoading(false);
-      setRejected(error.message);
-        }
-    })();   
-
-}, [movieId]);
+      } catch (error) {
+        setLoading(false);
+        setRejected(error.message);
+      }
+    })();
+  }, [movieId]);
 
   return (
-      <div>
+    <div>
       {loading && 'Loading'}
 
       {rejected && !loading && <div>{rejected}</div>}
 
       {!loading && (
-    <CastContainer>
+        <CastContainer>
           {credits.map(({ name, character, profile_path, id }) => (
             <CastItem
               key={id}
@@ -43,9 +40,9 @@ const Cast = () => {
               id={id}
             />
           ))}
-    </CastContainer>
+        </CastContainer>
       )}
-        </div>
+    </div>
   );
 };
 
