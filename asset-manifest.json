@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.3c3a0abe.js",
-    "static/js/733.7f1911ba.chunk.js": "/goit-react-hw-05-movies/static/js/733.7f1911ba.chunk.js",
+    "main.css": "/goit-react-hw-05-movies/static/css/main.9b4bc3fe.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.77ac60a2.js",
+    "static/js/733.4ae4ff4e.chunk.js": "/goit-react-hw-05-movies/static/js/733.4ae4ff4e.chunk.js",
     "static/js/681.88623b11.chunk.js": "/goit-react-hw-05-movies/static/js/681.88623b11.chunk.js",
+    "static/media/1639621654_4-abrakadabra-fun-p-png-kinoplenka-5.jpg": "/goit-react-hw-05-movies/static/media/1639621654_4-abrakadabra-fun-p-png-kinoplenka-5.6058c09fd6a869de2fbc.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.3c3a0abe.js.map": "/goit-react-hw-05-movies/static/js/main.3c3a0abe.js.map",
-    "733.7f1911ba.chunk.js.map": "/goit-react-hw-05-movies/static/js/733.7f1911ba.chunk.js.map",
+    "main.9b4bc3fe.css.map": "/goit-react-hw-05-movies/static/css/main.9b4bc3fe.css.map",
+    "main.77ac60a2.js.map": "/goit-react-hw-05-movies/static/js/main.77ac60a2.js.map",
+    "733.4ae4ff4e.chunk.js.map": "/goit-react-hw-05-movies/static/js/733.4ae4ff4e.chunk.js.map",
     "681.88623b11.chunk.js.map": "/goit-react-hw-05-movies/static/js/681.88623b11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.3c3a0abe.js"
+    "static/css/main.9b4bc3fe.css",
+    "static/js/main.77ac60a2.js"
   ]
 }
