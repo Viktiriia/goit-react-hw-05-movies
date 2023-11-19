@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef,  Suspense } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { getFullInformationMovies } from 'services/api';
 
-import { Container, BackButton, LinkEl } from './MovieDetails.styled';
+import { getFullInformationMovies } from 'services/api';
+import { Loader } from 'components/Loader/Loader';
+import { Container, BackButton, List , LinkEl, Links} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState([]);
@@ -20,7 +20,7 @@ const MovieDetails = () => {
   } = movieInfo;
   
   const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w300';
-  const defaultImg = 'https://image.similarpng.com/very-thumbnail/2020/08/Movie-film-disk-with-clapper-board-vector-PNG.png';
+  const defaultImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhaDnzMN7FM09igiYzDa2-6tJUO8akDyCZ4A&usqp=CAU';
 
   useEffect(() => {
     try {
@@ -36,11 +36,11 @@ const MovieDetails = () => {
   }, [movieId]);
   return (
     <main>
-      <BackButton to={backLink.current}>= Go back =</BackButton>
+      <BackButton to={backLink.current}> ← Go back </BackButton>
     
-        {isLoading && 'Loading'}
+        {isLoading && <Loader />}
         {title && (
-          <Container>
+          <Container >
             <div>
                 <img
                   src={
@@ -58,15 +58,16 @@ const MovieDetails = () => {
                 <h3>Genres</h3>
                 <p>{genres.map(({ name }) => name).join(' ')}</p>
               
-            <ul>
+                
+                <List>
               <LinkEl>
-                <Link to="cast">Cast</Link>
+                <Links to="cast">Cast</Links>
               </LinkEl>
 
               <LinkEl>
-                <Link to="reviews">Reviews</Link>
+                <Links to="reviews">Reviews</Links>
               </LinkEl>
-            </ul>
+            </List>
                 </div>
             
           </Container>
@@ -74,7 +75,6 @@ const MovieDetails = () => {
             <Suspense fallback={'Loading'}>
             <Outlet />
           </Suspense>
-    
     </main>
   );
 };

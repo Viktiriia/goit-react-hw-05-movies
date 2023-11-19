@@ -1,22 +1,6 @@
-// import { Div, Input, Button } from './SearchBox.styled';
-// const SearchBox = ({ value, onChange }) => {
-//   return (
-//     <Div>
-//       <Input
-//         type="text"
-//         value={value}
-//         onChange={e => onChange(e.target.value)}
-//       />
-//       <Button type="submit">Search</Button>
-//     </Div>
-//   );
-// };
-
-// export default SearchBox;
-
 import { useState } from 'react';
-import { Form, Input, Button } from './SearchBox.styled';
 
+import { Form, Button } from './SearchBox.styled'
 export default function SearchForm({ formSubmit, errorMessage }) {
   const [query, setQuery] = useState('');
 
@@ -35,15 +19,18 @@ export default function SearchForm({ formSubmit, errorMessage }) {
   };
 
   return (
-    
+ 
       <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          value={query}
-          onChange={handleInput}
-        />
-        <Button type="submit">Search</Button>
-      </Form>
-  
+      <h2>Movie Search</h2>
+      <input
+        type="text"
+        debounceTimeout={500}
+        value={query}
+        onChange={handleInput}
+        placeholder="enter the name of the movie"
+      />
+     <Button type="submit">Search</Button>
+    </Form>
+
   );
 }

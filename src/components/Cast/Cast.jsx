@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getCast } from 'services/api';
 import  CastItem  from 'components/CastItem/CastItem';
 import { CastContainer } from './Cast.styled';
+import { Loader } from 'components/Loader/Loader';
 
 const Cast = () => {
   const [credits, setCredits] = useState([]);
@@ -25,7 +26,7 @@ const Cast = () => {
 
   return (
     <div>
-      {loading && 'Loading'}
+      {loading && Loader}
 
       {rejected && !loading && <div>{rejected}</div>}
 

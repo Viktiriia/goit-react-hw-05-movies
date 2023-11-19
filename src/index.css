@@ -7,7 +7,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+    rgba(228, 229, 236, 0.7),
+    rgba(255, 255, 255, 0.7)
+  ),
+  url(./components//imeg/1639621654_4-abrakadabra-fun-p-png-kinoplenka-5.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

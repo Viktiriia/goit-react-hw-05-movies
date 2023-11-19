@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { getTrendingMovies } from '../../services/api';
-import { Element, Title } from './Home.styled';
+import { Element, Title, LinkDetails } from './Home.styled';
+import { Loader } from 'components/Loader/Loader';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -29,11 +29,11 @@ const Home = () => {
       <ul>
         {loading
           ? trendingMovies.map(({ title, id, name }) => (
-              <Element key={id}>
-                <Link to={`/movies/${id}`}>{title || name}</Link>
+              <Element key={id}> 
+                <LinkDetails to={`/movies/${id}`}>{title || name}</LinkDetails>
               </Element>
             ))
-          : 'Loading'}
+          : <Loader />}
       </ul>
     </main>
   );

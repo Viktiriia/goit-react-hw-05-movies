@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 export const BackButton = styled(Link)`
+ margin-left: 50px;
   border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
@@ -20,26 +21,32 @@ export const BackButton = styled(Link)`
 
 export const Container = styled.div`
   display: flex;
-  padding-bottom: 10px;
+
+  padding: 50px;
   box-shadow: 0 4px 2px -2px gray;
   gap: 20px;
-
-
 `
-
+export const List = styled.ul`
+ display: flex;
+`
 export const LinkEl = styled.li`
- border: 1px solid black;
+   border: 2px solid black;
   border-radius: 5px;
-  font-size: 18px;
  display: flex;
   justify-content: center;
   width: 100px;
-  color: black;
-  text-decoration: none;
- 
-  
-
+  list-style: none;
+  padding: 8px 16px;
+  margin: 0 16px 16px 0;
+  font-size: 18px;
+  cursor: pointer;
 `
+
+export const Links = styled(Link)`
+ color: #000;
+  text-decoration: none;
+`
+
 
 export const AdditionalInfo = styled.div`
 padding-left: 30px;

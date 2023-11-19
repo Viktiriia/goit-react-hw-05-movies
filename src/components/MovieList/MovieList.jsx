@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { MoviesList, Title } from '../pages/MovieDetails/MovieDetails.styled';
+import { MoviesList, Title } from '../../pages/MovieDetails/MovieDetails.styled';
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200';
 const defaultImg =
