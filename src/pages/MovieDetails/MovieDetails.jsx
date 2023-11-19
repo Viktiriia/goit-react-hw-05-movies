@@ -20,7 +20,7 @@ const MovieDetails = () => {
   } = movieInfo;
   
   const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w300';
-  const defaultImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhaDnzMN7FM09igiYzDa2-6tJUO8akDyCZ4A&usqp=CAU';
+  const defaultImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd-Z3topWIzyE3XNK9nlyB0hjDqnXazy2yqg&usqp=CAU';
 
   useEffect(() => {
     try {

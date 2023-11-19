@@ -3,7 +3,7 @@ import { MoviesList, Title } from '../../pages/MovieDetails/MovieDetails.styled'
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200';
 const defaultImg =
-  'https://image.similarpng.com/very-thumbnail/2020/08/Movie-film-disk-with-clapper-board-vector-PNG.png';
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd-Z3topWIzyE3XNK9nlyB0hjDqnXazy2yqg&usqp=CAU';
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
